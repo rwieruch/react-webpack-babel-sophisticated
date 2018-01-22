@@ -1,8 +1,8 @@
-# minimal-react-webpack-babel-setup
+# react-webpack-babel-sophisticated
 
-[![Build Status](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup.svg?branch=master)](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup)
+[![Build Status](https://travis-ci.org/rwieruch/react-webpack-babel-sophisticated.svg?branch=master)](https://travis-ci.org/rwieruch/react-webpack-babel-sophisticated)
 
-Read more about it: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
+How to start to build your own: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
 
 ## Features
 
@@ -11,11 +11,25 @@ Read more about it: [The Minimal React Webpack Babel Setup](https://www.robinwie
 * Babel
 * Staging ES Next Features
 * Hot Module Replacement
+* Devevelopment and Production Scripts
+* Source Maps
+* Less support, but exchangeable with Sass
+* Images
+* Uglify & Compression
+* Analyze & Visualize Bundle
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/minimal-react-webpack-babel-setup.git`
-* cd minimal-react-webpack-babel-setup
+* `git clone git@github.com:rwieruch/react-webpack-babel-sophisticated.git`
+* cd react-webpack-babel-sophisticated
 * npm install
 * npm start
 * visit `http://localhost:8080/`
+
+## Other Scripts
+
+* npm build
+* npm run dev:bundleanalyze
+* npm run build:bundleanalyze
+* npm run build:bundlevisualizer
+
