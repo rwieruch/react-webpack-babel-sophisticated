@@ -10,7 +10,8 @@
     "build": "webpack --env.env=prod",
     "build:bundleanalyze": "npm run build -- --env.addons=bundleanalyze",
     "build:bundlevisualizer": "npm run build -- --env.addons=bundlevisualizer",
-    "webpack-defaults": "webpack-defaults"
+    "webpack-defaults": "webpack-defaults",
+    "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
   "author": "",
