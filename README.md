@@ -13,10 +13,11 @@ How to start to build your own: [The Minimal React Webpack Babel Setup](https://
 * Hot Module Replacement
 * Devevelopment and Production Scripts
 * Source Maps
-* Less support, but exchangeable with Sass
-* Images
+* Less Support, but exchangeable with Sass
+* Image Support
 * Uglify & Compression
 * Analyze & Visualize Bundle
+* Tests with Mocha, Chai and Sinon
 
 ## Installation
 

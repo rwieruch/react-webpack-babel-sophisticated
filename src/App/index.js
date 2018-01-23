@@ -1,20 +1,64 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './style.less';
-
 import logo from './react.png';
 
+const title = 'My Sophisticated React Webpack Babel Setup';
+
+const doIncrement = (prevState) => ({
+  counter: prevState.counter + 1,
+});
+
+const doDecrement = (prevState) => ({
+  counter: prevState.counter - 1,
+});
+
 class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      counter: 0,
+    };
+
+    this.onIncrement = this.onIncrement.bind(this);
+    this.onDecrement = this.onDecrement.bind(this);
+  }
+
+  onIncrement() {
+    this.setState(doIncrement);
+  }
+
+  onDecrement() {
+    this.setState(doDecrement);
+  }
+
   render() {
-    const title = 'My Minimal React Webpack Babel Setup';
+    const { counter } = this.state;
 
     return (
       <div>
-        <img className="small" src={logo} alt="logo"/>
-        {title}
+        <div className="header">
+          <h1>{title}</h1>
+          <img className="header-image" src={logo} alt="logo"/>
+        </div>
+
+        <hr/>
+
+        <div className="content">
+          <p>{counter}</p>
+
+          <button type="button" onClick={this.onIncrement}>Increment</button>
+          <button type="button" onClick={this.onDecrement}>Decrement</button>
+        </div>
       </div>
     );
   }
 }
+
+export {
+  doIncrement,
+  doDecrement,
+};
 
 export default App;
