@@ -37,14 +37,14 @@ class App extends React.Component {
 
     return (
       <div>
-        <div className="header">
+        <div className="app-header">
           <h1>{title}</h1>
-          <img className="header-image" src={logo} alt="logo"/>
+          <img className="app-header-image" src={logo} alt="logo"/>
         </div>
 
         <hr/>
 
-        <div className="content">
+        <div className="app-content">
           <p>{counter}</p>
 
           <button type="button" onClick={this.onIncrement}>Increment</button>
