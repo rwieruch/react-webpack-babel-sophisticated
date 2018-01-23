@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import App, { doIncrement, doDecrement } from './';
 
 describe('App', () => {
-
   describe('state', () => {
     it('should increment the counter in state', () => {
       const state = { counter: 0 };
@@ -22,9 +21,20 @@ describe('App', () => {
   });
 
   describe('component', () => {
-    // it('should increment the counter in state', () => {
-    //   expect(true).to.be.true;
-    // });
+    const wrapper = shallow(<App title={'Foo Bar'} />);
+
+    it('renders the component with the correct element', () => {
+      expect(wrapper.type()).to.eql('div');
+    });
+
+    it('has the title in props', () => {
+      expect(wrapper.contains('Foo Bar')).to.equal(true);
+    });
+
+    it('has all class names', () => {
+        expect(wrapper.find('.header')).to.have.length(1);
+        expect(wrapper.find('.content')).to.have.length(1);
+    });
   });
 
   // test('renders', () => {

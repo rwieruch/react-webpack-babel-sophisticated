@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import './style.less';
 import logo from './react.png';
 
-const title = 'My Sophisticated React Webpack Babel Setup';
-
 const doIncrement = (prevState) => ({
   counter: prevState.counter + 1,
 });
@@ -35,6 +33,7 @@ class App extends React.Component {
 
   render() {
     const { counter } = this.state;
+    const { title } = this.props;
 
     return (
       <div>
