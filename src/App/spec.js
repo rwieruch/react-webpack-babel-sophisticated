@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import App, { doIncrement, doDecrement } from './';
 
@@ -21,19 +20,48 @@ describe('App', () => {
   });
 
   describe('component', () => {
-    const wrapper = shallow(<App title={'Foo Bar'} />);
+    const component = shallow(<App title={'Foo Bar'} />);
 
     it('renders the component with the correct element', () => {
-      expect(wrapper.type()).to.eql('div');
+      expect(component.type()).to.eql('div');
     });
 
     it('has the title in props', () => {
-      expect(wrapper.contains('Foo Bar')).to.equal(true);
+      expect(component.contains('Foo Bar')).to.equal(true);
     });
 
     it('has all class names', () => {
-        expect(wrapper.find('.header')).to.have.length(1);
-        expect(wrapper.find('.content')).to.have.length(1);
+      expect(component.find('.header')).to.have.length(1);
+      expect(component.find('.content')).to.have.length(1);
+    });
+  });
+
+  describe('lifecycle methods', () => {
+    it('calls render', () => {
+      spy(App.prototype, 'render');
+
+      const component = mount(<App />);
+      expect(App.prototype.render.calledOnce).to.equal(true);
+    });
+  });
+
+  describe('events', () => {
+    it('increments the counter', () => {
+      const component = mount(<App />);
+
+      component.setState({ counter: 1 });
+      component.find('button').at(0).simulate('click');
+
+      expect(component.state().counter).to.equal(2);
+    });
+
+    it('increments the counter', () => {
+      const component = mount(<App />);
+
+      component.setState({ counter: 1 });
+      component.find('button').at(1).simulate('click');
+
+      expect(component.state().counter).to.equal(0);
     });
   });
 
