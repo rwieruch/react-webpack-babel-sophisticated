@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/rwieruch/react-webpack-babel-sophisticated.svg?branch=master)](https://travis-ci.org/rwieruch/react-webpack-babel-sophisticated)
 
-How to start to build your own: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
-Where to find a minimal version of it: [Here](https://github.com/rwieruch/minimal-react-webpack-babel-setup)!
+* How to start to build your own: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
+* Where to find a minimal version of it: [here](https://github.com/rwieruch/minimal-react-webpack-babel-setup)!
 
 ## Features
 
@@ -42,10 +42,8 @@ Where to find a minimal version of it: [Here](https://github.com/rwieruch/minima
 ## Other Scripts
 
 * `npm run build` (build application in dist folder)
-
 * `npm run test` (test application once)
-* `npm run tdd` (watch changing tests)
-
+* `npm run test:watch` (watch changing tests)
 * `npm run dev:bundleanalyze` (analyze dev bundle in browser)
 * `npm run build:bundleanalyze` (analyze build bundle in browser)
 * `npm run build:bundlevisualizer` (generate a stats HTML file to visualize bundles)

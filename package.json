@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles 'src/**/spec.js'",
-    "tdd": "npm test -- --watch",
+    "test:watch": "npm test -- --watch",
     "start": "npm run dev",
     "dev": "webpack-dev-server --env.env=dev",
     "dev:bundleanalyze": "npm run dev -- --env.addons=bundleanalyze",
