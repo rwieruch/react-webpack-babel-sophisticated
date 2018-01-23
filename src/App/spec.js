@@ -31,8 +31,8 @@ describe('App', () => {
     });
 
     it('has all class names', () => {
-      expect(component.find('.header')).to.have.length(1);
-      expect(component.find('.content')).to.have.length(1);
+      expect(component.find('.app-header')).to.have.length(1);
+      expect(component.find('.app-content')).to.have.length(1);
     });
   });
 
